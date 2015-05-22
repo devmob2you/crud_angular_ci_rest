@@ -1,0 +1,26 @@
+<h1>{{$parent.settings.pageTitle}}</h1>
+
+<p ng-show="$parent.settings.success" class="alert alert-success">{{$parent.settings.success}}</p>
+
+<div class="required-field-block">
+	<input type="text" placeholder="Nome" ng-model="book.name" class="form-control">
+	<div class="required-icon">
+		<div class="text">*</div>
+	</div>
+</div>
+
+<div class="required-field-block">
+	<input type="text" placeholder="Autor" ng-model="book.author" class="form-control">
+	<div class="required-icon">
+		<div class="text">*</div>
+	</div>
+</div>
+
+<div class="required-field-block">
+	<input type="date" placeholder="Data Publicação" ng-model="book.pub_date" class="form-control">
+	<div class="required-icon">
+		<div class="text">*</div>
+	</div>
+</div>
+
+<button class="btn btn-primary" ng-click="submit($parent.book)">{{$parent.settings.action}}</button>

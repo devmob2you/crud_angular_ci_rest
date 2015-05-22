@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="book in books">
+				<a href="#edit/{{book.id}}">{{book.name}}</a>
+				<div class="pull-right action-buttons">
+					<a href="#/edit/{{book.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a ng-click="remove(book.id)" class="trash"> <span class="glyphicon glyphicon-trash"></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
